@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HCHomeViewController.h
 //  HCJB
 //
 //  Created by 互传 on 2017/2/20.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HCHomeViewController : UIViewController
 
 @end
-

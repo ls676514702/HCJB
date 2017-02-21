@@ -1,0 +1,25 @@
+//
+//  HCJB.pch
+//  HCJB
+//
+//  Created by 互传 on 2017/2/20.
+//  Copyright © 2017年 互传. All rights reserved.
+//
+
+#ifndef HCJB_pch
+#define HCJB_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* HCJB_pch */
+#ifdef DEBUG
+
+// 调试时改变NSLog方法，输出时间、方法名、行数、输入的内容
+#define NSLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+
+#else
+
+#define NSLog(format, ...)
+
+#endif

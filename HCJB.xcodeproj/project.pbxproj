@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		0C9FD7EE1E5A8E00008F4D0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FD7ED1E5A8E00008F4D0A /* main.m */; };
 		0C9FD7F11E5A8E00008F4D0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FD7F01E5A8E00008F4D0A /* AppDelegate.m */; };
-		0C9FD7F41E5A8E00008F4D0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FD7F31E5A8E00008F4D0A /* ViewController.m */; };
 		0C9FD7F71E5A8E00008F4D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FD7F51E5A8E00008F4D0A /* Main.storyboard */; };
 		0C9FD7F91E5A8E00008F4D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FD7F81E5A8E00008F4D0A /* Assets.xcassets */; };
 		0C9FD7FC1E5A8E00008F4D0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FD7FA1E5A8E00008F4D0A /* LaunchScreen.storyboard */; };
 		0C9FD8071E5A8E00008F4D0A /* HCJBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FD8061E5A8E00008F4D0A /* HCJBTests.m */; };
+		0C9FD8141E5A8E4D008F4D0A /* HCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FD8131E5A8E4D008F4D0A /* HCHomeViewController.m */; };
+		0C9FD8191E5AA091008F4D0A /* HCNotiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FD8181E5AA091008F4D0A /* HCNotiView.m */; };
+		0C9FD81B1E5AA14E008F4D0A /* HCNotiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FD81A1E5AA14E008F4D0A /* HCNotiView.xib */; };
+		93DD1C8A5D59CA8FE836D202 /* libPods-HCJBTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 889010A0DF01408DF4732064 /* libPods-HCJBTests.a */; };
+		AE3485B061478400D1B04CCE /* libPods-HCJB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 607DE399CA0A937826DAD922 /* libPods-HCJB.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +35,6 @@
 		0C9FD7ED1E5A8E00008F4D0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C9FD7EF1E5A8E00008F4D0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0C9FD7F01E5A8E00008F4D0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0C9FD7F21E5A8E00008F4D0A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0C9FD7F31E5A8E00008F4D0A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0C9FD7F61E5A8E00008F4D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C9FD7F81E5A8E00008F4D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C9FD7FB1E5A8E00008F4D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +42,18 @@
 		0C9FD8021E5A8E00008F4D0A /* HCJBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HCJBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9FD8061E5A8E00008F4D0A /* HCJBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCJBTests.m; sourceTree = "<group>"; };
 		0C9FD8081E5A8E00008F4D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C9FD8121E5A8E4D008F4D0A /* HCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHomeViewController.h; sourceTree = "<group>"; };
+		0C9FD8131E5A8E4D008F4D0A /* HCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHomeViewController.m; sourceTree = "<group>"; };
+		0C9FD8151E5A92E5008F4D0A /* HCJB.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCJB.pch; sourceTree = "<group>"; };
+		0C9FD8171E5AA091008F4D0A /* HCNotiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNotiView.h; sourceTree = "<group>"; };
+		0C9FD8181E5AA091008F4D0A /* HCNotiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNotiView.m; sourceTree = "<group>"; };
+		0C9FD81A1E5AA14E008F4D0A /* HCNotiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCNotiView.xib; sourceTree = "<group>"; };
+		2B38D322F1C883260EFF1D43 /* Pods-HCJBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCJBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCJBTests/Pods-HCJBTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2DC9C90A4469F4497125116F /* Pods-HCJBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCJBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCJBTests/Pods-HCJBTests.release.xcconfig"; sourceTree = "<group>"; };
+		607DE399CA0A937826DAD922 /* libPods-HCJB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HCJB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		790C83DF487B669143359610 /* Pods-HCJB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCJB.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCJB/Pods-HCJB.release.xcconfig"; sourceTree = "<group>"; };
+		889010A0DF01408DF4732064 /* libPods-HCJBTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HCJBTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D0D454AB83EDA1BC15CC916 /* Pods-HCJB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCJB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCJB/Pods-HCJB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3485B061478400D1B04CCE /* libPods-HCJB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DD1C8A5D59CA8FE836D202 /* libPods-HCJBTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +82,8 @@
 				0C9FD7EB1E5A8E00008F4D0A /* HCJB */,
 				0C9FD8051E5A8E00008F4D0A /* HCJBTests */,
 				0C9FD7EA1E5A8E00008F4D0A /* Products */,
+				ACF0F3DFBD1E67D5E9C501AB /* Pods */,
+				35F3414F38E9AC7301AF8615 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +99,10 @@
 		0C9FD7EB1E5A8E00008F4D0A /* HCJB */ = {
 			isa = PBXGroup;
 			children = (
+				0C9FD8161E5AA078008F4D0A /* NotiView */,
+				0C9FD8111E5A8E3B008F4D0A /* HCHome */,
 				0C9FD7EF1E5A8E00008F4D0A /* AppDelegate.h */,
 				0C9FD7F01E5A8E00008F4D0A /* AppDelegate.m */,
-				0C9FD7F21E5A8E00008F4D0A /* ViewController.h */,
-				0C9FD7F31E5A8E00008F4D0A /* ViewController.m */,
 				0C9FD7F51E5A8E00008F4D0A /* Main.storyboard */,
 				0C9FD7F81E5A8E00008F4D0A /* Assets.xcassets */,
 				0C9FD7FA1E5A8E00008F4D0A /* LaunchScreen.storyboard */,
@@ -98,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9FD7ED1E5A8E00008F4D0A /* main.m */,
+				0C9FD8151E5A92E5008F4D0A /* HCJB.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -111,6 +130,45 @@
 			path = HCJBTests;
 			sourceTree = "<group>";
 		};
+		0C9FD8111E5A8E3B008F4D0A /* HCHome */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FD8121E5A8E4D008F4D0A /* HCHomeViewController.h */,
+				0C9FD8131E5A8E4D008F4D0A /* HCHomeViewController.m */,
+			);
+			path = HCHome;
+			sourceTree = "<group>";
+		};
+		0C9FD8161E5AA078008F4D0A /* NotiView */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FD8171E5AA091008F4D0A /* HCNotiView.h */,
+				0C9FD8181E5AA091008F4D0A /* HCNotiView.m */,
+				0C9FD81A1E5AA14E008F4D0A /* HCNotiView.xib */,
+			);
+			path = NotiView;
+			sourceTree = "<group>";
+		};
+		35F3414F38E9AC7301AF8615 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				607DE399CA0A937826DAD922 /* libPods-HCJB.a */,
+				889010A0DF01408DF4732064 /* libPods-HCJBTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACF0F3DFBD1E67D5E9C501AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D454AB83EDA1BC15CC916 /* Pods-HCJB.debug.xcconfig */,
+				790C83DF487B669143359610 /* Pods-HCJB.release.xcconfig */,
+				2B38D322F1C883260EFF1D43 /* Pods-HCJBTests.debug.xcconfig */,
+				2DC9C90A4469F4497125116F /* Pods-HCJBTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C9FD80B1E5A8E00008F4D0A /* Build configuration list for PBXNativeTarget "HCJB" */;
 			buildPhases = (
+				38D67C20798D4DA2EC68AB84 /* [CP] Check Pods Manifest.lock */,
 				0C9FD7E51E5A8E00008F4D0A /* Sources */,
 				0C9FD7E61E5A8E00008F4D0A /* Frameworks */,
 				0C9FD7E71E5A8E00008F4D0A /* Resources */,
+				86D864AFC7707C77DB583941 /* [CP] Embed Pods Frameworks */,
+				4C6566A0DC275333762ACEE2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C9FD80E1E5A8E00008F4D0A /* Build configuration list for PBXNativeTarget "HCJBTests" */;
 			buildPhases = (
+				CEA6E40B4BD5E79752165ECB /* [CP] Check Pods Manifest.lock */,
 				0C9FD7FE1E5A8E00008F4D0A /* Sources */,
 				0C9FD7FF1E5A8E00008F4D0A /* Frameworks */,
 				0C9FD8001E5A8E00008F4D0A /* Resources */,
+				6932E1E4003EDA368FA0F919 /* [CP] Embed Pods Frameworks */,
+				1E764FDDA4F11882FF1291D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +219,7 @@
 		0C9FD7E11E5A8E00008F4D0A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HC;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "互传";
 				TargetAttributes = {
@@ -198,6 +263,7 @@
 				0C9FD7FC1E5A8E00008F4D0A /* LaunchScreen.storyboard in Resources */,
 				0C9FD7F91E5A8E00008F4D0A /* Assets.xcassets in Resources */,
 				0C9FD7F71E5A8E00008F4D0A /* Main.storyboard in Resources */,
+				0C9FD81B1E5AA14E008F4D0A /* HCNotiView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,14 +276,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E764FDDA4F11882FF1291D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HCJBTests/Pods-HCJBTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38D67C20798D4DA2EC68AB84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C6566A0DC275333762ACEE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HCJB/Pods-HCJB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6932E1E4003EDA368FA0F919 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HCJBTests/Pods-HCJBTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86D864AFC7707C77DB583941 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HCJB/Pods-HCJB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEA6E40B4BD5E79752165ECB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0C9FD7E51E5A8E00008F4D0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9FD7F41E5A8E00008F4D0A /* ViewController.m in Sources */,
+				0C9FD8141E5A8E4D008F4D0A /* HCHomeViewController.m in Sources */,
 				0C9FD7F11E5A8E00008F4D0A /* AppDelegate.m in Sources */,
 				0C9FD7EE1E5A8E00008F4D0A /* main.m in Sources */,
+				0C9FD8191E5AA091008F4D0A /* HCNotiView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +509,13 @@
 		};
 		0C9FD80C1E5A8E00008F4D0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D0D454AB83EDA1BC15CC916 /* Pods-HCJB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FE2487MHJB;
+				GCC_PREFIX_HEADER = HCJB/HCJB.pch;
 				INFOPLIST_FILE = HCJB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huchuan6.cn.HCJB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,10 +524,13 @@
 		};
 		0C9FD80D1E5A8E00008F4D0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790C83DF487B669143359610 /* Pods-HCJB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FE2487MHJB;
+				GCC_PREFIX_HEADER = HCJB/HCJB.pch;
 				INFOPLIST_FILE = HCJB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huchuan6.cn.HCJB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,6 +539,7 @@
 		};
 		0C9FD80F1E5A8E00008F4D0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B38D322F1C883260EFF1D43 /* Pods-HCJBTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FE2487MHJB;
@@ -386,6 +553,7 @@
 		};
 		0C9FD8101E5A8E00008F4D0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DC9C90A4469F4497125116F /* Pods-HCJBTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FE2487MHJB;
@@ -416,6 +584,7 @@
 				0C9FD80D1E5A8E00008F4D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C9FD80E1E5A8E00008F4D0A /* Build configuration list for PBXNativeTarget "HCJBTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +593,7 @@
 				0C9FD8101E5A8E00008F4D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
