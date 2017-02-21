@@ -91,11 +91,13 @@ static BOOL isQQ = NO;
     [self.backView addSubview:_notiView];
 }
 - (void)removeNotiView{
-    if (_notiView) {
-        [_notiView removeFromSuperview];
-    }
     [SVProgressHUD showWithStatus:@"检测到网络，正在为您加载，请稍后"];
     [_wkWebview reload];
+    if (_progress.progress==1) {
+        if (_notiView) {
+            [_notiView removeFromSuperview];
+        }
+    }
 }
 #pragma mark --设置WebView并且设置KVO
 - (void)setWebViewAndSendNoti{
