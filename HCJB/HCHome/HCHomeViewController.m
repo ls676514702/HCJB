@@ -8,6 +8,7 @@
 
 #import "HCHomeViewController.h"
 #import <WebKit/WebKit.h>
+#import "HCWebView.h"
 #import <AFNetworking/AFNetworking.h>
 #import "HCNotiView.h"
 #import <SVProgressHUD/SVProgressHUD.h>
@@ -30,7 +31,7 @@ static BOOL isFirstLoad = YES;
 //是否是登陆界面
 static BOOL isQQ = NO;
 @implementation HCHomeViewController{
-    WKWebView *_wkWebview;
+    HCWebView *_wkWebview;
     AFNetworkReachabilityManager *_manager;
     HCNotiView *_notiView;
 }
@@ -54,11 +55,8 @@ static BOOL isQQ = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.backBtn.hidden = YES;
-    
-    
 }
 
 #pragma mark --设置网络监测
@@ -85,8 +83,6 @@ static BOOL isQQ = NO;
                 break;
         }
     }];
-    
-    
 }
 - (void)setNotiView{
     _notiView = [HCNotiView loadNotiView];
@@ -107,26 +103,14 @@ static BOOL isQQ = NO;
     //    WKWebViewConfiguration *config =[[WKWebViewConfiguration alloc]init];
     //    config.userContentController = [WKUserContentController new];
     //    _wkWebview = [[WKWebView alloc]initWithFrame:self.backView.bounds configuration:config];
-    _wkWebview = [[WKWebView alloc] initWithFrame:self.backView.bounds];
+    _wkWebview = [HCWebView loadWebView:self.backView];
     _wkWebview.navigationDelegate = self;
-    _wkWebview.backgroundColor = [UIColor whiteColor];
-    [self setMessage];
-    NSURL *url = [NSURL URLWithString:@"http://110.huchuan6.com"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [_wkWebview loadRequest:request];
     [self.backView addSubview:_wkWebview];
-    
     [_wkWebview addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionOld context:nil];
     //  [_wkWebview addObserver:self forKeyPath:@"canGoForward" options:NSKeyValueObservingOptionNew context:nil];
     [_wkWebview addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionOld context:nil];
 }
-- (void)setMessage{
-    UILabel *messageLabel = [[UILabel alloc] init];
-    messageLabel.frame = CGRectMake(0, 100, 100, 20);
-    messageLabel.text = @"haha";
-    [self.backView addSubview:messageLabel];
-    NSLog(@"%@",messageLabel);
-}
+
 #pragma mark --KVO监听属性变化
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if (_wkWebview.canGoBack&&isQQ==NO) {
@@ -154,7 +138,6 @@ static BOOL isQQ = NO;
         if (_notiView) {
             [_notiView removeFromSuperview];
         }
-        
     }
 }
 #pragma mark --移除KVO

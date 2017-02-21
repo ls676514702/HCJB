@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5FEC701E5C3028005CA4A0 /* HCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5FEC6F1E5C3028005CA4A0 /* HCWebView.m */; };
 		0C9FD7EE1E5A8E00008F4D0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FD7ED1E5A8E00008F4D0A /* main.m */; };
 		0C9FD7F11E5A8E00008F4D0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FD7F01E5A8E00008F4D0A /* AppDelegate.m */; };
 		0C9FD7F71E5A8E00008F4D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FD7F51E5A8E00008F4D0A /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C5FEC6E1E5C3028005CA4A0 /* HCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWebView.h; sourceTree = "<group>"; };
+		0C5FEC6F1E5C3028005CA4A0 /* HCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCWebView.m; sourceTree = "<group>"; };
 		0C9FD7E91E5A8E00008F4D0A /* HCJB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCJB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9FD7ED1E5A8E00008F4D0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C9FD7EF1E5A8E00008F4D0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 			children = (
 				0C9FD8121E5A8E4D008F4D0A /* HCHomeViewController.h */,
 				0C9FD8131E5A8E4D008F4D0A /* HCHomeViewController.m */,
+				0C5FEC6E1E5C3028005CA4A0 /* HCWebView.h */,
+				0C5FEC6F1E5C3028005CA4A0 /* HCWebView.m */,
 			);
 			path = HCHome;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				0C9FD8141E5A8E4D008F4D0A /* HCHomeViewController.m in Sources */,
 				0C9FD7F11E5A8E00008F4D0A /* AppDelegate.m in Sources */,
 				0C9FD7EE1E5A8E00008F4D0A /* main.m in Sources */,
+				0C5FEC701E5C3028005CA4A0 /* HCWebView.m in Sources */,
 				0C9FD8191E5AA091008F4D0A /* HCNotiView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
