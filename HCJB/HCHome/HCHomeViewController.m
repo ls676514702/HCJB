@@ -54,8 +54,11 @@ static BOOL isQQ = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.backBtn.hidden = YES;
+    
+    
 }
 
 #pragma mark --设置网络监测
@@ -101,12 +104,13 @@ static BOOL isQQ = NO;
 }
 #pragma mark --设置WebView并且设置KVO
 - (void)setWebViewAndSendNoti{
-//    WKWebViewConfiguration *config =[[WKWebViewConfiguration alloc]init];
-//    config.userContentController = [WKUserContentController new];
-//    _wkWebview = [[WKWebView alloc]initWithFrame:self.backView.bounds configuration:config];
+    //    WKWebViewConfiguration *config =[[WKWebViewConfiguration alloc]init];
+    //    config.userContentController = [WKUserContentController new];
+    //    _wkWebview = [[WKWebView alloc]initWithFrame:self.backView.bounds configuration:config];
     _wkWebview = [[WKWebView alloc] initWithFrame:self.backView.bounds];
     _wkWebview.navigationDelegate = self;
     _wkWebview.backgroundColor = [UIColor whiteColor];
+    [self setMessage];
     NSURL *url = [NSURL URLWithString:@"http://110.huchuan6.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_wkWebview loadRequest:request];
@@ -115,6 +119,13 @@ static BOOL isQQ = NO;
     [_wkWebview addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionOld context:nil];
     //  [_wkWebview addObserver:self forKeyPath:@"canGoForward" options:NSKeyValueObservingOptionNew context:nil];
     [_wkWebview addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionOld context:nil];
+}
+- (void)setMessage{
+    UILabel *messageLabel = [[UILabel alloc] init];
+    messageLabel.frame = CGRectMake(0, 100, 100, 20);
+    messageLabel.text = @"haha";
+    [self.backView addSubview:messageLabel];
+    NSLog(@"%@",messageLabel);
 }
 #pragma mark --KVO监听属性变化
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
@@ -131,7 +142,7 @@ static BOOL isQQ = NO;
             [self appearTopView];
         }
     }else{
-    //如果是第一页将顶部导航条和进度条显示
+        //如果是第一页将顶部导航条和进度条显示
         self.topView.hidden = NO;
         self.progress.hidden = NO;
     }
@@ -178,7 +189,7 @@ static BOOL isQQ = NO;
 
 //网页加载完成后的代理方法--提高用户体验
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    //如果是登陆页面
+    //如果是腾讯接口登陆页面
     if ([self.strUrl containsString:@"qqLoginAuth.html"]) {
         isQQ = YES;
         [self appearTopView];
@@ -188,10 +199,11 @@ static BOOL isQQ = NO;
         isQQ = NO;
         [self appearTopView];
     }
-    //    if ([strUrl containsString:@"qqlogin.html"]) {
-    //        isQQ = NO;
-    //        [self appearTopView];
-    //    }
+    //即将调用腾讯接口的页面
+    if ([self.strUrl containsString:@"qqlogin.html"]) {
+        isQQ = NO;
+        [self appearTopView];
+    }
     //如果是首页，隐藏返回按钮
     if ([self.strUrl isEqualToString:@"http://110.huchuan6.com/"]) {
         self.backBtn.hidden = YES;
