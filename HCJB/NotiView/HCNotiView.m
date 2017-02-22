@@ -11,7 +11,9 @@
 @implementation HCNotiView
 
 + (instancetype)loadNotiView{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([HCNotiView class]) owner:nil options:nil] firstObject];
+}
++ (instancetype)loadProtectView{
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([HCNotiView class]) owner:nil options:nil] lastObject];
 }
-
 @end

@@ -17,7 +17,8 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-Zf-HdW">
                     <rect key="frame" x="109.5" y="313" width="156" height="41"/>
-                    <string key="text">嗷呦呦，没有网络了请检查网络设置......</string>
+                    <string key="text">嗷呦呦，没有网络了
+请检查网络设置......</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -29,6 +30,25 @@
                 <constraint firstItem="zS7-Zf-HdW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mB7-aZ-joT"/>
             </constraints>
             <point key="canvasLocation" x="18" y="37"/>
+        </view>
+        <view contentMode="scaleToFill" id="Vj5-Ji-Hc0" customClass="HCNotiView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gah-hQ-kaX">
+                    <rect key="frame" x="118.5" y="313" width="139" height="41"/>
+                    <string key="text">服务器正在维护中请稍后启动......</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Gah-hQ-kaX" firstAttribute="centerX" secondItem="Vj5-Ji-Hc0" secondAttribute="centerX" id="Gcy-x6-TRi"/>
+                <constraint firstItem="Gah-hQ-kaX" firstAttribute="centerY" secondItem="Vj5-Ji-Hc0" secondAttribute="centerY" id="Jyc-tF-Nha"/>
+            </constraints>
+            <point key="canvasLocation" x="496.5" y="45.5"/>
         </view>
     </objects>
 </document>

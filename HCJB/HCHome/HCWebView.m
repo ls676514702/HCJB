@@ -9,7 +9,6 @@
 #import "HCWebView.h"
 
 @implementation HCWebView
-
 /*
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.
@@ -17,14 +16,12 @@
  // Drawing code
  }
  */
-
 + (instancetype)loadWebView:(UIView *)backView{
     HCWebView *_wkWebview = [[self alloc] initWithFrame:backView.bounds];
     _wkWebview.backgroundColor = [UIColor whiteColor];
-    NSURL *url = [NSURL URLWithString:@"http://110.huchuan6.com"];
+    NSURL *url = [NSURL URLWithString:@"http://110.huchuan.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_wkWebview loadRequest:request];
     return _wkWebview;
 }
-
 @end

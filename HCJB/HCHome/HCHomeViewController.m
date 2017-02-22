@@ -34,6 +34,7 @@ static BOOL isQQ = NO;
     HCWebView *_wkWebview;
     AFNetworkReachabilityManager *_manager;
     HCNotiView *_notiView;
+    HCNotiView *_protectView;
 }
 - (IBAction)back:(id)sender {
     [_wkWebview goBack];
@@ -84,6 +85,7 @@ static BOOL isQQ = NO;
         }
     }];
 }
+#pragma mark --设置断网提示的View
 - (void)setNotiView{
     _notiView = [HCNotiView loadNotiView];
     _notiView.frame = self.backView.bounds;
@@ -96,6 +98,17 @@ static BOOL isQQ = NO;
         if (_notiView) {
             [_notiView removeFromSuperview];
         }
+    }
+}
+#pragma mark --设置服务器出错的View
+- (void)setProtectView{
+    _protectView = [HCNotiView loadProtectView];
+    _protectView.frame = self.backView.bounds;
+    [self.backView addSubview:_protectView];
+}
+- (void)removeProtectView{
+    if (_notiView) {
+        [_notiView removeFromSuperview];
     }
 }
 #pragma mark --设置WebView并且设置KVO
@@ -145,6 +158,7 @@ static BOOL isQQ = NO;
     [_wkWebview removeObserver:self forKeyPath:@"canGoBack"];
     //    [_wkWebview removeObserver:self forKeyPath:@"canGoForward"];
     [_wkWebview removeObserver:self forKeyPath:@"estimatedProgress"];
+    [self removeProtectView];
 }
 #pragma mark --真正设置控件frame的方法
 - (void)viewDidLayoutSubviews{
@@ -192,7 +206,10 @@ static BOOL isQQ = NO;
         self.backBtn.hidden = YES;
     }
 }
-
+//服务器加载失败的方法
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
+    [self setProtectView];
+}
 - (void)appearTopView{
     if (isQQ == YES) {
         self.topLeading.constant = 64;
@@ -201,6 +218,5 @@ static BOOL isQQ = NO;
         self.topLeading.constant = 20;
         self.topView.hidden = YES;
     }
-    
 }
 @end

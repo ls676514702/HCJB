@@ -10,4 +10,5 @@
 
 @interface HCNotiView : UIView
 + (instancetype)loadNotiView;
++ (instancetype)loadProtectView;
 @end
