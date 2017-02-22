@@ -36,8 +36,8 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gah-hQ-kaX">
-                    <rect key="frame" x="118.5" y="313" width="139" height="41"/>
-                    <string key="text">服务器正在维护中请稍后启动......</string>
+                    <rect key="frame" x="113.5" y="313" width="149.5" height="41"/>
+                    <string key="text">服务器正在维护中请稍后重新启动......</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

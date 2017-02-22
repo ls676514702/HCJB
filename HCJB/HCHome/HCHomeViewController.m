@@ -30,6 +30,8 @@
 static BOOL isFirstLoad = YES;
 //是否是登陆界面
 static BOOL isQQ = NO;
+//是否服务器开启成功
+static BOOL isSuccess = YES;
 @implementation HCHomeViewController{
     HCWebView *_wkWebview;
     AFNetworkReachabilityManager *_manager;
@@ -43,6 +45,7 @@ static BOOL isQQ = NO;
 - (IBAction)refresh:(id)sender {
     [SVProgressHUD showWithStatus:@"正在重新加载，请稍后..."];
     [_wkWebview reload];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -158,6 +161,7 @@ static BOOL isQQ = NO;
     [_wkWebview removeObserver:self forKeyPath:@"canGoBack"];
     //    [_wkWebview removeObserver:self forKeyPath:@"canGoForward"];
     [_wkWebview removeObserver:self forKeyPath:@"estimatedProgress"];
+    [self removeNotiView];
     [self removeProtectView];
 }
 #pragma mark --真正设置控件frame的方法
@@ -205,11 +209,23 @@ static BOOL isQQ = NO;
     if ([self.strUrl isEqualToString:@"http://110.huchuan6.com/"]) {
         self.backBtn.hidden = YES;
     }
+    //    if(_protectView){
+    //        [self removeProtectView];
+    //    }
 }
+
 //服务器加载失败的方法
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
-    [self setProtectView];
+    NSLog(@"%ld",error.code);
+    if (error.code!=-999) {
+        isSuccess = NO;
+        [self setProtectView];
+    }
+    //    [self setProtectView];
 }
+
+
+
 - (void)appearTopView{
     if (isQQ == YES) {
         self.topLeading.constant = 64;
